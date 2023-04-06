@@ -1,0 +1,491 @@
+@charset "UTF-8";
+body {
+  font-family: "Pretendard Variable";
+  font-weight: 400;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*헤더*/
+header {
+  width: 100%;
+  height: 9rem;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  padding-top: 3vw;
+  border-bottom: 1px solid #999;
+}
+header .innerHeader {
+  width: 91%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+header .innerHeader .headerTop {
+  display: flex;
+  justify-content: space-between;
+}
+header .innerHeader .headerTop .headerLT {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25vw 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+header .innerHeader .headerTop .headerLT .logo {
+  width: 9vw;
+  height: 2.5vw;
+  transform: translatey(2%);
+}
+header .innerHeader .headerTop .headerLT .logo a {
+  width: 100%;
+  display: block;
+}
+header .innerHeader .headerTop .headerLT .logo a img {
+  width: 100%;
+  height: 100%;
+}
+header .innerHeader .headerTop .headerLT .searchBox {
+  position: relative;
+  width: 20vw;
+  height: 1.5vw;
+  box-sizing: border-box;
+  padding: 1vw 0;
+  margin-left: 1vw;
+  background: #f8f8f8;
+}
+header .innerHeader .headerTop .headerLT .searchBox .searchBtn {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+header .innerHeader .headerTop .headerLT .searchBox #keyword {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  color: #999;
+  padding: 0.3vw;
+  border: none;
+  background: transparent;
+}
+header .innerHeader .headerTop .headerLT .searchBox #keyword:focus {
+  outline: none;
+}
+header .innerHeader .headerTop .headerLT .searchBox ::-moz-placeholder {
+  font-size: 0.8vw;
+}
+header .innerHeader .headerTop .headerLT .searchBox ::placeholder {
+  font-size: 0.8vw;
+}
+header .innerHeader .headerTop .headerRT {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+header .innerHeader .headerTop .headerRT ul {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .innerHeader .headerTop .headerRT ul .login, header .innerHeader .headerTop .headerRT ul .signin {
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 0.8vw;
+  padding: 0.1vw;
+  box-sizing: border-box;
+  text-align: center;
+}
+header .innerHeader .headerTop .headerRT ul .login a, header .innerHeader .headerTop .headerRT ul .signin a {
+  display: block;
+  width: 100%;
+}
+header .innerHeader .headerTop .headerRT ul .login {
+  padding-right: 0.4vw;
+  transform: translateX(12%);
+}
+header .innerHeader .headerTop .headerRT ul .signin {
+  transform: translateX(-15%);
+  padding-left: 0.5vw;
+  border-left: 1px solid #999;
+}
+header .innerHeader .headerTop .headerRT ul .wish, header .innerHeader .headerTop .headerRT ul .cart {
+  width: 1.25vw;
+  padding: 0.3vw;
+}
+header .innerHeader .headerTop .headerRT ul .wish img, header .innerHeader .headerTop .headerRT ul .cart img {
+  width: 100%;
+}
+header .innerHeader .headerTop .headerRT ul .wish {
+  transform: translateX(-10%);
+}
+header .innerHeader .headerTop .headerRT select {
+  width: 20%;
+  height: 50%;
+  margin-top: 1.15vw;
+  margin-left: 2vw;
+  padding: 0.4vw 0;
+  border: 1px solid #999;
+  border-radius: 5%;
+  box-sizing: border-box;
+  color: #444;
+  font-size: 0.8vw;
+  text-align: center;
+}
+header .innerHeader .headerBottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vw;
+}
+header .innerHeader .headerBottom .headerLB ul {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+header .innerHeader .headerBottom .headerLB ul li {
+  box-sizing: border-box;
+  padding: 0.3vw 0.2vw 0.3vw 0;
+  margin-right: 1.2vw;
+}
+header .innerHeader .headerBottom .headerLB ul li a {
+  display: block;
+  width: 100%;
+  font-size: 0.9vw;
+  font-family: "Pretendard Variable";
+  font-weight: 700;
+}
+header .innerHeader .headerBottom .headerLB ul li a .open {
+  font-size: 0.5vw;
+  color: #fff;
+  background-color: #000;
+  padding: 0.2rem 0.4rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  position: relative;
+  top: -0.15rem;
+  margin-right: 0.3rem;
+}
+header .innerHeader .headerBottom .headerLB ul li:last-child {
+  border-left: 1px solid #999;
+  padding-left: 1vw;
+}
+header .innerHeader .headerBottom .headerRB {
+  background: #f8f8f8;
+  padding: 0.3vw;
+  box-sizing: border-box;
+}
+header .innerHeader .headerBottom .headerRB a {
+  display: flex;
+  align-items: center;
+}
+header .innerHeader .headerBottom .headerRB a img {
+  margin-right: 0.3vw;
+}
+header .innerHeader .headerBottom .headerRB a p {
+  display: inline;
+  font-size: 0.5vw;
+  color: #444;
+}
+
+/*공통*/
+main, section {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5vw;
+}
+main .inner, section .inner {
+  width: 92%;
+  margin: 0 auto;
+}
+main .inner h3.title, section .inner h3.title {
+  font-family: "Pretendard Variable";
+  font-weight: 700;
+  font-size: 1.8vw;
+  margin-bottom: 0.6vw;
+}
+main .inner p.desc, section .inner p.desc {
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 0.8vw;
+  color: #999;
+  margin-bottom: 2.4vw;
+}
+
+main {
+  padding-top: 10rem;
+}
+main .inner .top_gallery {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  margin-bottom: 1.2vw;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 14.5vw);
+  grid-template-areas: "a b b c" "a b b d" "e b b d" "e b b f";
+}
+main .inner .top_gallery .imgBox {
+  padding: 1.25vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+main .inner .top_gallery .imgBox a {
+  width: 100%;
+}
+main .inner .top_gallery .imgBox a img {
+  width: 100%;
+  height: 120%;
+  border-radius: 1%;
+}
+main .inner .top_gallery .imgBox a p {
+  position: absolute;
+  font-size: 1.4vw;
+  padding: 1.25vw;
+  box-sizing: border-box;
+  top: 8%;
+  left: 8%;
+  color: #fff;
+  line-height: 1.5;
+  font-family: "Pretendard Variable";
+  font-weight: 700;
+}
+main .inner .top_gallery .imgBox1 {
+  grid-area: a;
+}
+main .inner .top_gallery .imgBox2 {
+  grid-area: e;
+}
+main .inner .top_gallery .imgBox3 {
+  grid-area: b;
+}
+main .inner .top_gallery .imgBox3 a p {
+  top: 4%;
+  left: 4%;
+}
+main .inner .top_gallery .imgBox4 {
+  grid-area: c;
+}
+main .inner .top_gallery .imgBox5 {
+  grid-area: d;
+}
+main .inner .top_gallery .imgBox6 {
+  grid-area: f;
+}
+main .inner .bottom_gallery {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(3, 15.4vw);
+  grid-template-areas: "a b c" "a b e" "a d e";
+}
+main .inner .bottom_gallery .imgBox {
+  padding: 1.25vw;
+  box-sizing: border-box;
+  position: relative;
+}
+main .inner .bottom_gallery .imgBox a {
+  width: 100%;
+}
+main .inner .bottom_gallery .imgBox a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+}
+main .inner .bottom_gallery .imgBox a p {
+  position: absolute;
+  font-size: 1.4vw;
+  padding: 1.25vw;
+  box-sizing: border-box;
+  top: 5%;
+  left: 5%;
+  color: #fff;
+  line-height: 1.5;
+  font-family: "Pretendard Variable";
+  font-weight: 700;
+}
+main .inner .bottom_gallery .imgBox7 {
+  grid-area: a;
+}
+main .inner .bottom_gallery .imgBox8 {
+  grid-area: b;
+}
+main .inner .bottom_gallery .imgBox9 {
+  grid-area: c;
+}
+main .inner .bottom_gallery .imgBox10 {
+  grid-area: d;
+}
+main .inner .bottom_gallery .imgBox11 {
+  grid-area: e;
+}
+
+section.curation .swiper {
+  width: 100%;
+  margin-bottom: 2.5vw;
+}
+section.curation .swiper .swiper-wrapper {
+  margin-left: 4.219vw;
+  box-sizing: border-box;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide {
+  padding-right: 4.219vw;
+  box-sizing: border-box;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg {
+  width: 21.146vw;
+  height: 21.563vw;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg a {
+  width: 100%;
+  display: block;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg a img {
+  width: 100%;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galTxt {
+  margin-bottom: 0.8vw;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .gal_list {
+  width: 100%;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .gal_list li {
+  padding: 0.3vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .gal_list li .smallImg {
+  width: 6.9vw;
+  height: 5.4vw;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .gal_list li .smallImg a {
+  width: 100%;
+  display: block;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .gal_list li .smallImg a img {
+  width: 100%;
+}
+section.curation .swiper_bottom {
+  margin: 0 auto;
+  width: 10%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 2vw;
+  margin-bottom: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.curation .swiper_bottom .swiper-button-prev, section.curation .swiper_bottom .swiper-button-next {
+  color: #444;
+  width: 1vw;
+  height: 1vw;
+  top: 50%;
+  transform: scale(0.3) translate3d(-50%, -50%, 0);
+}
+section.curation .swiper_bottom .swiper-pagination {
+  position: absolute;
+  width: 20%;
+  top: 42%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+section.premium {
+  margin-bottom: 5vw;
+}
+section.premium .inner .img_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section.premium .inner .img_list li {
+  width: 49%;
+}
+section.premium .inner .img_list li .imgBox a {
+  width: 100%;
+  display: block;
+}
+section.premium .inner .img_list li .imgBox a img {
+  width: 100%;
+  height: 100%;
+}
+section.premium .inner .img_list li .imgDesc {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+section.premium .inner .img_list li .imgDesc .authorImg {
+  width: 10%;
+}
+section.premium .inner .img_list li .imgDesc .authorImg img {
+  width: 100%;
+  border-radius: 50%;
+}
+section.premium .inner .img_list li .imgDesc .authorDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1vw;
+}
+section.premium .inner .img_list li .imgDesc .authorDesc .author {
+  font-size: 0.8vw;
+  color: #2f2f2f;
+  font-family: "Pretendard Variable";
+  font-weight: 400;
+}
+section.premium .inner .img_list li .imgDesc .authorDesc .imgTit {
+  font-size: 1vw;
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+}
+
+section.edition {
+  margin-bottom: 5vw;
+}
+section.edition .edition_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-start;
+}
+section.edition .edition_list li {
+  width: 24%;
+  margin-right: 2vw;
+}
+section.edition .edition_list li .box {
+  width: 100%;
+  background: rgba(192, 192, 192, 0.1);
+  position: relative;
+  margin-bottom: 1.5vw;
+}
+section.edition .edition_list li .box img {
+  width: 100%;
+}
+section.edition .edition_list li .box .date {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  box-sizing: border-box;
+  padding: 0.3vw;
+  background: #e4e4e4;
+  color: #444;
+  font-size: 0.7vw;
+  font-family: "Pretendard Variable";
+  font-weight: 500;
+}
+section.edition .edition_list li p.title {
+  font-family: "Pretendard Variable";
+  font-weight: 700;
+  font-size: 0.95vw;
+  color: #444;
+}/*# sourceMappingURL=style.css.map */
