@@ -12,20 +12,28 @@ body {
 /*헤더*/
 header {
   width: 100%;
-  height: 9rem;
+  height: 8.5rem;
   background: #fff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  box-sizing: border-box;
-  padding-top: 3vw;
-  border-bottom: 1px solid #999;
+  padding-top: 1rem;
+}
+header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 8rem;
+  left: 0;
+  background: #f8f8f8;
 }
 header .innerHeader {
   width: 91%;
   box-sizing: border-box;
   margin: 0 auto;
+  overflow: hidden;
 }
 header .innerHeader .headerTop {
   display: flex;
@@ -34,12 +42,12 @@ header .innerHeader .headerTop {
 header .innerHeader .headerTop .headerLT {
   display: flex;
   justify-content: space-between;
-  padding: 1.25vw 0;
+  padding: 1vw 0vw 0.5vw;
   box-sizing: border-box;
   align-items: flex-start;
 }
 header .innerHeader .headerTop .headerLT .logo {
-  width: 9vw;
+  width: 8vw;
   height: 2.5vw;
   transform: translatey(2%);
 }
@@ -53,22 +61,24 @@ header .innerHeader .headerTop .headerLT .logo a img {
 }
 header .innerHeader .headerTop .headerLT .searchBox {
   position: relative;
-  width: 20vw;
+  width: 17vw;
   height: 1.5vw;
   box-sizing: border-box;
   padding: 1vw 0;
+  border-radius: 5%;
   margin-left: 1vw;
   background: #f8f8f8;
 }
 header .innerHeader .headerTop .headerLT .searchBox .searchBtn {
   position: absolute;
-  top: 15%;
-  left: 5%;
+  top: 20%;
+  left: 3%;
+  transform: scale(0.8);
 }
 header .innerHeader .headerTop .headerLT .searchBox #keyword {
   position: absolute;
-  top: 15%;
-  left: 15%;
+  top: 17%;
+  left: 11%;
   color: #999;
   padding: 0.3vw;
   border: none;
@@ -78,10 +88,14 @@ header .innerHeader .headerTop .headerLT .searchBox #keyword:focus {
   outline: none;
 }
 header .innerHeader .headerTop .headerLT .searchBox ::-moz-placeholder {
-  font-size: 0.8vw;
+  font-size: 0.75vw;
+  color: #666;
+  opacity: 0.8;
 }
 header .innerHeader .headerTop .headerLT .searchBox ::placeholder {
-  font-size: 0.8vw;
+  font-size: 0.75vw;
+  color: #666;
+  opacity: 0.8;
 }
 header .innerHeader .headerTop .headerRT {
   width: 20%;
@@ -89,7 +103,7 @@ header .innerHeader .headerTop .headerRT {
   justify-content: space-between;
 }
 header .innerHeader .headerTop .headerRT ul {
-  width: 75%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +127,7 @@ header .innerHeader .headerTop .headerRT ul .login {
 header .innerHeader .headerTop .headerRT ul .signin {
   transform: translateX(-15%);
   padding-left: 0.5vw;
-  border-left: 1px solid #999;
+  border-left: 1px solid #e4e4e4;
 }
 header .innerHeader .headerTop .headerRT ul .wish, header .innerHeader .headerTop .headerRT ul .cart {
   width: 1.25vw;
@@ -126,13 +140,13 @@ header .innerHeader .headerTop .headerRT ul .wish {
   transform: translateX(-10%);
 }
 header .innerHeader .headerTop .headerRT select {
-  width: 20%;
-  height: 50%;
+  width: 31%;
+  height: 45%;
   margin-top: 1.15vw;
   margin-left: 2vw;
   padding: 0.4vw 0;
   border: 1px solid #999;
-  border-radius: 5%;
+  border-radius: 13%;
   box-sizing: border-box;
   color: #444;
   font-size: 0.8vw;
@@ -141,7 +155,7 @@ header .innerHeader .headerTop .headerRT select {
 header .innerHeader .headerBottom {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1vw;
+  margin-bottom: 0.1vw;
 }
 header .innerHeader .headerBottom .headerLB ul {
   box-sizing: border-box;
@@ -161,10 +175,10 @@ header .innerHeader .headerBottom .headerLB ul li a {
   font-weight: 700;
 }
 header .innerHeader .headerBottom .headerLB ul li a .open {
-  font-size: 0.5vw;
+  font-size: 0.1vw;
   color: #fff;
   background-color: #000;
-  padding: 0.2rem 0.4rem;
+  padding: 0.1rem 0.3rem;
   border-radius: 2rem;
   font-weight: 500;
   position: relative;
@@ -172,8 +186,8 @@ header .innerHeader .headerBottom .headerLB ul li a .open {
   margin-right: 0.3rem;
 }
 header .innerHeader .headerBottom .headerLB ul li:last-child {
-  border-left: 1px solid #999;
-  padding-left: 1vw;
+  border-left: 1px solid #e4e4e4;
+  padding-left: 1.25vw;
 }
 header .innerHeader .headerBottom .headerRB {
   background: #f8f8f8;
@@ -218,7 +232,7 @@ main .inner p.desc, section .inner p.desc {
 }
 
 main {
-  padding-top: 10rem;
+  margin-top: 10rem;
 }
 main .inner .top_gallery {
   width: 100%;
@@ -289,6 +303,7 @@ main .inner .bottom_gallery .imgBox {
   padding: 1.25vw;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 main .inner .bottom_gallery .imgBox a {
   width: 100%;
@@ -341,6 +356,8 @@ section.curation .swiper .swiper-wrapper .swiper-slide {
 section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg {
   width: 21.146vw;
   height: 21.563vw;
+  overflow: hidden;
+  margin-bottom: 0.8vw;
 }
 section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg a {
   width: 100%;
@@ -348,9 +365,35 @@ section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg a {
 }
 section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galImg a img {
   width: 100%;
+  height: 100%;
+  border-radius: 2%;
 }
 section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galTxt {
   margin-bottom: 0.8vw;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galTxt .category {
+  font-family: "Pretendard Variable";
+  font-weight: 400;
+  font-size: 0.65vw;
+  padding: 0.3vw 0.4vw;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #e4e4e4;
+  border-radius: 5%;
+  margin-bottom: 0.6vw;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galTxt .galTit {
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 1vw;
+  margin-bottom: 0.6vw;
+}
+section.curation .swiper .swiper-wrapper .swiper-slide .galBox .galTxt .galDesc {
+  font-family: "Pretendard Variable";
+  font-weight: 400;
+  font-size: 0.75vw;
+  line-height: 1.5;
+  color: #666;
 }
 section.curation .swiper .swiper-wrapper .swiper-slide .gal_list {
   width: 100%;

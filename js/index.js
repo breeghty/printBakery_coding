@@ -7,7 +7,7 @@ document.addEventListener('click', function(e) {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     centeredSlides: false,
-    spaceBetween: 30,
+    spaceBetween: 10,
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",

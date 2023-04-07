@@ -44,28 +44,36 @@ body{
 /*헤더*/
 header{
     width: 100%;
-    height:9rem;
+    height:8.5rem;
     background: #fff;
     position:fixed;
     top:0;
     left:0;
     z-index: 100;
-    box-sizing: border-box;
-    padding-top: 3vw;
-    border-bottom: 1px solid v.$dark-grey;
+    padding-top: 1rem;
+    &:after{
+        content:'';
+        position:absolute;
+        width:100%;
+        height:1px;
+        top:8rem;
+        left:0;
+        background: #f8f8f8;
+    }
     .innerHeader{
         width: 91%;
         box-sizing: border-box;
         margin:0 auto;
+        overflow: hidden;
         .headerTop{
             @include flex_between;
             .headerLT{
                 @include flex_between;
-                padding: 1.25vw 0;
+                padding: 1vw 0vw 0.5vw;
                 box-sizing: border-box;
                 align-items: flex-start;
                 .logo{
-                    width:9vw;
+                    width:8vw;
                     height: 2.5vw;
                     transform: translatey(2%);
                     a{
@@ -79,22 +87,23 @@ header{
                 }
                 .searchBox{
                     position:relative;
-                    width: 20vw;
+                    width: 17vw;
                     height: 1.5vw;
                     box-sizing: border-box;
                     padding:1vw 0;
+                    border-radius: 5%;
                     margin-left: 1vw;
                     background:v.$grey-color;
-                    
                     .searchBtn{
                         position:absolute;
-                        top:15%;
-                        left:5%;
+                        top:20%;
+                        left:3%;
+                        transform: scale(0.8);
                     }
                     #keyword{
                         position:absolute;
-                        top:15%;
-                        left: 15%;
+                        top:17%;
+                        left: 11%;
                         color:v.$dark-grey;
                         padding: 0.3vw;
                         border:none;
@@ -104,7 +113,9 @@ header{
                         }
                     }
                     ::placeholder{
-                        font-size: 0.8vw;
+                        font-size: 0.75vw;
+                        color:#666;
+                        opacity:0.8
                     }
                 }
             }
@@ -112,7 +123,7 @@ header{
                 width:20%;
                 @include flex_between;
                 ul{
-                    width:75%;
+                    width:90%;
                     @include flex_between;
                     align-items: center;
                     .login, .signin{
@@ -133,7 +144,7 @@ header{
                     .signin{
                         transform: translateX(-15%);
                         padding-left: 0.5vw;
-                        border-left: 1px solid v.$dark-grey;
+                        border-left: 1px solid #e4e4e4;
                     }
                     .wish, .cart{
                         width:1.25vw;
@@ -148,13 +159,13 @@ header{
                     
                 }
                 select{
-                    width:20%;
-                    height: 50%;
+                    width:31%;
+                    height: 45%;
                     margin-top:1.15vw;
                     margin-left: 2vw;
                     padding:0.4vw 0;
                     border:1px solid v.$dark-grey;
-                    border-radius: 5%;
+                    border-radius: 13%;
                     box-sizing: border-box;
                     color:#444;
                     font-size: 0.8vw;
@@ -165,7 +176,7 @@ header{
         }
         .headerBottom{
             @include flex_between;
-            margin-bottom: 1vw;
+            margin-bottom: 0.1vw;
             .headerLB{
                 ul{
                     box-sizing: border-box;
@@ -180,10 +191,10 @@ header{
                             font-size: 0.9vw;
                             @include font-bd;
                             .open{
-                                font-size: 0.5vw;
+                                font-size: 0.1vw;
                                 color: #fff;
                                 background-color: #000;
-                                padding: 0.2rem 0.4rem;
+                                padding: 0.1rem 0.3rem;
                                 border-radius: 2rem;
                                 font-weight: 500;
                                 position: relative;
@@ -193,8 +204,8 @@ header{
                         }
                     }
                     li:last-child{
-                        border-left: 1px solid v.$dark-grey;
-                        padding-left: 1vw;
+                        border-left: 1px solid #e4e4e4;
+                        padding-left: 1.25vw;
                     }
                 }
             }
@@ -243,7 +254,7 @@ main,section{
 }
 
 main{
-    padding-top: 10rem;
+    margin-top: 10rem;
     .inner{
         .top_gallery{
             width:100%;
@@ -325,6 +336,7 @@ main{
                 padding: 1.25vw;
                 box-sizing: border-box;
                 position:relative;
+                overflow: hidden;
                 a{
                     width:100%;
                     img{
@@ -378,16 +390,41 @@ section.curation{
                     .galImg{
                         width:21.146vw;
                         height: 21.563vw;
+                        overflow: hidden;
+                        margin-bottom: 0.8vw;
                         a{
                             width:100%;
                             display: block;
                             img{
                                 width:100%;
+                                height:100%;
+                                border-radius: 2%;
                             }
                         }
                     }
                     .galTxt{
                         margin-bottom: 0.8vw;
+                        .category{
+                            @include font-rg;
+                            font-size: 0.65vw;
+                            padding:0.3vw 0.4vw;
+                            display:inline-block;
+                            box-sizing: border-box;
+                            background: #e4e4e4;
+                            border-radius: 5%;
+                            margin-bottom: 0.6vw;
+                        }
+                        .galTit{
+                            @include font-md;
+                            font-size: 1vw;
+                            margin-bottom: 0.6vw;
+                        }
+                        .galDesc{
+                            @include font-rg;
+                            font-size: 0.75vw;
+                            line-height: 1.5;
+                            color:#666;
+                        }
                     }
                 }
                 .gal_list{
