@@ -35,5 +35,5 @@ SCSS 전처리기를 사용하여 레이아웃을 작성했으며 CSS grid와 fl
 <br>
 
 ### ✔ 풀페이지(Full page)
-<img src="./img/full_hanhwa.png" width="600px" height="auto" alt="한화케미컬 클론코딩 풀페이지">
+<img src="./img/fullshot" width="600px" height="auto" alt="한화케미컬 클론코딩 풀페이지">
 
