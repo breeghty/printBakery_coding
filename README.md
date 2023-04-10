@@ -10,7 +10,7 @@ SCSS 전처리기를 사용하여 레이아웃을 작성했으며 CSS grid와 fl
 <br>
 
 ### 👀 클론코딩 사이트 보기 (Click to View) 
-👉 <https://breeghty.github.io/Hanhwa_clonecoding/>
+👉 <https://breeghty.github.io/printBakery_coding/>
 
 <br>
 
