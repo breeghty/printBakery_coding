@@ -48,7 +48,7 @@ table {
 }
 button{
     border:none;
-    color:transparent;
+    background:transparent;
 }
 a{
     text-decoration: none;

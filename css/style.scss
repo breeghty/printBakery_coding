@@ -56,7 +56,7 @@ header{
         position:absolute;
         width:100%;
         height:1px;
-        top:8rem;
+        top:8.5rem;
         left:0;
         background: #f8f8f8;
     }
@@ -69,12 +69,12 @@ header{
             @include flex_between;
             .headerLT{
                 @include flex_between;
-                padding: 1vw 0vw 0.5vw;
+                padding: 1.5vw 0vw 1vw;
                 box-sizing: border-box;
                 align-items: flex-start;
                 .logo{
                     width:8vw;
-                    height: 2.5vw;
+                    height: 2vw;
                     transform: translatey(2%);
                     a{
                         width:100%;
@@ -88,7 +88,7 @@ header{
                 .searchBox{
                     position:relative;
                     width: 17vw;
-                    height: 1.5vw;
+                    height: 2vw;
                     box-sizing: border-box;
                     padding:1vw 0;
                     border-radius: 5%;
@@ -378,15 +378,17 @@ main{
 
 section.curation{
     .swiper{
-        width:100%;
+        width:95%;
         margin-bottom: 2.5vw;
         .swiper-wrapper{
             margin-left: 4.219vw;
             box-sizing: border-box;
             .swiper-slide{
-                padding-right: 4.219vw;
+                padding-right: 3.219vw;
                 box-sizing: border-box;
                 .galBox{
+                    border-bottom: 1px solid v.$grey-color;
+                    margin-bottom: 1vw;
                     .galImg{
                         width:21.146vw;
                         height: 21.563vw;
@@ -430,18 +432,51 @@ section.curation{
                 .gal_list{
                     width:100%;
                     li{
+                        width:100%;
                         padding: 0.3vw;
                         box-sizing: border-box;
                         @include flex_between;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-bottom: 1vw;
+                        position: relative;
                         .smallImg{
-                            width: get-vw(69px);
-                            height: get-vw(54px);
+                            width:4.25rem;
+                            flex:0 0 auto;
+                            margin-right: 1vw;
+                            overflow: hidden;
+                            background: #f7f7f7;
                             a{
                                 width:100%;
                                 display:block;
                                 img{
                                     width:100%;
+                                    mix-blend-mode: multiply;
                                 }
+                            }
+                        }
+                        .imgInfo{
+                            .author, .imgTit{
+                                @include font-md;
+                                font-size: 0.7vw;
+                                opacity: 0.8;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow:hidden;
+                                margin-bottom: 0.5vw;
+                            }
+                            .price{
+                                @include font-bd;
+                            }
+                        }
+                        .icon{
+                            position:absolute;
+                            width:0.8vw;
+                            height:0.8vw;
+                            right:0;
+                            top:50%;
+                            img{
+                                width:100%;
                             }
                         }
                     }
@@ -468,10 +503,53 @@ section.curation{
         }
         .swiper-pagination{
             position:absolute;
-            width:20%;
+            color:#999;
+            width:35%;
             top:42%;
             left: 50%;
             transform: translate3d(-50%,-50%,0);
+            .swiper-pagination-current{
+                @include font-md;
+                color:#000;
+                margin:0 0.2vw;
+            }
+            .swiper-pagination-total{
+                @include font-md;
+                margin:0 0.2vw;
+                
+            }
+        }
+    }
+}
+
+.swiper-slide:nth-child(5){
+    .date{
+        @include font-rg;
+        font-size: 0.65vw;
+        padding: 0.3vw 0.4vw;
+        display: inline-block;
+        box-sizing: border-box;
+        background: #e4e4e4;
+        border-radius: 5%;
+        margin-bottom: 0.6vw;
+    }
+    .gal_list{
+        .imgInfo{
+            .price_origin{
+                text-decoration: line-through;
+                color:#666;
+                @include font-md;
+            }
+            .price{
+                display: inline-block;
+                position: relative;
+                &::after{
+                    content:'5%';
+                    position:absolute;
+                    right:-43%;
+                    color:red;
+                }
+            }
         }
     }
 }
@@ -566,6 +644,166 @@ section.edition{
                 @include font-bd;
                 font-size: 0.95vw;
                 color:#444;
+            }
+        }
+    }
+}
+
+footer{
+    width:100%;
+    // border-top:1px solid #e4e4e4;
+    box-sizing: border-box;
+    position:relative;
+    &::after{
+        content:'';
+        width:100%;
+        height: 1px;
+        background: #e4e4e4;
+        position:absolute;
+        top:-2%;
+        left:0;
+    }
+    &::before{
+        content:'';
+        width:100%;
+        height: 1px;
+        background: #e4e4e4;
+        position:absolute;
+        bottom:23%;
+        left:0;
+    }
+    .innerFooter{
+        width:92%;
+        margin:0 auto;
+        .footerTop{
+            @include flex_between;
+            padding:3vw 0vw 4.25vw;
+            .listBox{
+                .list_1{
+                    @include flex_between;
+                    margin-bottom: 4.5vw;
+                    li{
+                        margin-right:3vw;
+                        .tit{
+                            @include font-bd;
+                            font-size: 1.3vw;
+                            margin-bottom: 1vw;
+                        }
+                        .desc{
+                            @include font-lt;
+                            line-height: 1.5;
+                            font-size: 0.8vw;
+                        }
+                    }
+                }
+                .list_2{
+                    width:95%;
+                    @include flex_between;
+                    @include font-md;
+                    align-items: center;
+                    color:#666;
+                    li{
+                        a{
+                            display: block;
+                            width: 100%;
+                            img{
+                                opacity:0.5;
+                            }
+                        }
+                    }
+                }
+            }
+            .subscribe{
+                margin-right: 3.5vw;
+                box-sizing: border-box;
+                width: 22.5%;
+                .inputBox{
+                    width:100%;
+                    margin-bottom: 1.5vw;
+                    label{
+                        display: none;
+                    }
+                    input{
+                        width: 100%;
+                        height: 0.5vw;
+                        display: inline-block;
+                        padding: 0.5vw 0;
+                        // box-sizing: border-box;
+                        border:none;
+                        border-bottom: 1px solid #000;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    ::placeholder{
+                        font-size: 0.7vw;
+                        color:#666;
+                        opacity:0.8;
+                    }
+                }
+                .agree{
+                    margin-bottom: 2.5vw;
+                    input{
+                        border: 1px solid #444;
+                        color:#444;
+                        &:checked{
+                            background: #000;
+                            color:#fff;
+                        }
+                    }
+                    label{
+                        font-size: 0.7vw;
+                        color:#000;
+                        @include font-lt;
+                    }
+                }
+                button{
+                    @include font-md;
+                    font-size: 1.2vw;
+                    cursor: pointer;
+                }
+            }
+        }
+        .footerBottom{
+            width:86%;
+            padding:1vw 0;
+            @include flex_between;
+            align-items: center;
+            .left{
+                @include font-rg;
+                font-size: 0.4vw;
+                color:#999999;
+                .address{
+                    @include flex_between;
+                    justify-content: flex-start;
+                    margin-bottom: 0.5vw;
+                    li{
+                        margin-right:0.3vw;
+                    }
+                }
+                .address_2{
+                    @include flex_between;
+                    li{
+                        margin-right:0.3vw;
+                    }
+                }
+            }
+            .right{
+                .sns{
+                    @include flex_between;
+                    li{
+                        box-sizing: border-box;
+                        padding: 1vw 0.7vw;
+                        a, button{
+                            display: block;
+                            width:100%;
+                            cursor: pointer;
+                            img{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -17,3 +17,11 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+const wishIcons = document.querySelectorAll('.icon img');
+
+for(let i = 0; i<wishIcons.length; i++){
+    wishIcons[i].addEventListener('click',function(){
+        alert("로그인 후 관심상품 등록을 해주세요.");
+    });
+}
